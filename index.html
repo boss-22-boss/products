@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Агросоюз - Наша продукция</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		body {
+			background: #f5f5f5 url('https://agrosoyuznsk.ru/wp-content/uploads/2025/03/906694_fb970a40678a43489e9b8e317b69a9e2mv2-копия-1.jpg') no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.header {
+			text-align: center;
+			padding: 20px 0;
+			background: #3653ba;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.logo {
+			max-width: 200px;
+			height: auto;
+		}
+
+		h1 {
+			color: #2c3e50;
+			margin: 30px 0;
+			text-align: center;
+			font-size: 36px;
+			text-transform: uppercase;
+		}
+
+		.products-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+			margin-top: 30px;
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+			padding: 0 0px;
+		}
+
+		.product-card {
+			background: #fff;
+			border-radius: 10px;
+			padding: 20px;
+			text-align: center;
+			transition: transform 0.3s ease;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			aspect-ratio: 1/1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-decoration: none;
+			will-change: transform;
+			max-width: 200px;
+			max-height: 200px;
+			margin: 0 auto;
+		}
+
+		.product-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+		}
+
+		.product-icon {
+			width: 60%;
+			height: 60%;
+			object-fit: contain;
+			margin-bottom: 15px;
+		}
+
+		.product-name {
+			color: #34495e;
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		@media (max-width: 768px) {
+			.products-grid {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 8px;
+				padding: 0 10px;
+				max-width: 100%;
+			}
+
+			.product-card {
+				padding: 10px;
+				max-width: 150px;
+				max-height: 150px;
+				/* Добавляем стили для управления переполнением */
+				overflow: hidden;
+			}
+
+			.product-icon {
+				width: 70%;
+				height: 70%;
+				margin-bottom: 8px;
+				/* Уменьшаем отступ */
+			}
+
+			.product-name {
+				font-size: 12px;
+				/* Уменьшаем размер шрифта */
+				line-height: 1.2;
+				/* Уменьшаем межстрочный интервал */
+				/* Добавляем многоточие при переполнении */
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				/* Максимум 2 строки */
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				max-height: 2.4em;
+				/* Высота для 2 строк */
+			}
+
+			h1 {
+				font-size: 24px;
+				margin: 20px 0;
+			}
+
+			.container {
+				padding: 10px;
+			}
+		}
+
+		@media (max-width: 360px) {
+			.product-card {
+				max-width: 130px;
+				max-height: 130px;
+				padding: 8px;
+			}
+
+			.product-name {
+				font-size: 11px;
+				/* Еще меньше шрифт для самых маленьких экранов */
+				-webkit-line-clamp: 3;
+				/* Разрешаем 3 строки для очень длинных названий */
+				max-height: 3.6em;
+				/* Высота для 3 строк */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<header class="header">
+		<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/11/logo-agroV6.svg" alt="Агросоюз" class="logo">
+    </header>
+
+		<div class="container">
+			<h1>Каталог товаров</h1>
+
+			<div class="products-grid">
+				<!-- Пример карточки товара (повторить для всех 38 позиций) -->
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat_kalijnyj_marki_am_v_meshkah_20/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-4.png" alt="Лигногумат АМ" class="product-icon">
+					<div class="product-name">ЛИГНОГУМАТ АМ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/magnesium-sulfate-7-aqueous/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/01/img-товар-на-подложке-15.png" alt="МАГНИЙ СЕРНОКИСЛЫЙ 7-ВОДНЫЙ" class="product-icon">
+					<div class="product-name">МАГНИЙ СЕРНОКИСЛЫЙ 7-ВОДНЫЙ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/ammonium-calcium-nitrate-grade-a-premium/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-27.png" alt="НИТРАТ КАЛЬЦИЯ" class="product-icon">
+					<div class="product-name">НИТРАТ КАЛЬЦИЯ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/nitrat-kaliya-marki-a/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/04/img-товар-на-подложке-23-1.png" alt="НИТРАТ КАЛИЯ" class="product-icon">
+					<div class="product-name">НИТРАТ КАЛИЯ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/potassium-sulfate-solupotasse/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-30.png" alt="Сульфат Калия" class="product-icon">
+					<div class="product-name">Сульфат Калия</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/monokalium-phosphate-haifa/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-29.png" alt="Монокалий фосфат" class="product-icon">
+					<div class="product-name">Монокалий фосфат</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/potassium-nitrate-multi-to-gg/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-28.png" alt="Нитрат калия Multi-К GG" class="product-icon">
+					<div class="product-name">Нитрат калия Multi-К GG</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mineralnye-udobreniya/epsom-salt/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/10/img-товар-на-подложке-26.png" alt="Английская соль" class="product-icon">
+					<div class="product-name">Английская соль</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stubble-destructors/eco/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-55.png" alt="Экостерн" class="product-icon">
+					<div class="product-name">Экостерн</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stubble-destructors/ecosterntill/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-49.png" alt="Экостерн NO TILL" class="product-icon">
+					<div class="product-name">Экостерн NO TILL</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/fungitsidy/fitohelp/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-56.png" alt="Фитохелп" class="product-icon">
+					<div class="product-name">Фитохелп</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/fungitsidy/mikohelp/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-57.png" alt="Микохелп" class="product-icon">
+					<div class="product-name">Микохелп</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-marki-vm-npk-v-kanistre-10-litrov/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-40.png" alt="Лигногумат ВМ-NPK" class="product-icon">
+					<div class="product-name">Лигногумат ВМ-NPK</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-marki-vm-v-kanistre-10-litrov/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-39.png" alt="Лигногумат ВМ" class="product-icon">
+					<div class="product-name">Лигногумат ВМ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-kalijnyj-marki-bm-v-kanistre-10-litrov/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-44.png" alt="Лигногумат БМ" class="product-icon">
+					<div class="product-name">Лигногумат БМ</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-marki-b-v-kanistre/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-36.png" alt="Лигногумат Б" class="product-icon">
+					<div class="product-name">Лигногумат Б</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat_marki_a_meshok_20/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-45.png" alt="Лигногумат А" class="product-icon">
+					<div class="product-name">Лигногумат А</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/biokley/liposamklei/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-48.png" alt="Липосам Биоклей" class="product-icon">
+					<div class="product-name">Липосам Биоклей</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/biokley/liposam/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-47.png" alt="Биоприлипатель Липосам" class="product-icon">
+					<div class="product-name">Биоприлипатель Липосам</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/biokley/prilipatel/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-46.png" alt="Прилипатель «Униклей»" class="product-icon">
+					<div class="product-name">Прилипатель «Униклей»</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/biokley/unikley-dlya-rapsa-i-gorokha/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/04/img-товар-на-подложке-58.png" alt="Униклей для рапса и гороха" class="product-icon">
+					<div class="product-name">Униклей для рапса и гороха</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/mycorrhizal-preparations/mfrend/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-52.png" alt="Микофренд" class="product-icon">
+					<div class="product-name">Микофренд</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/rc-mobilizers/groundfix/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-53.png" alt="Граундфикс" class="product-icon">
+					<div class="product-name">Граундфикс</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/bio-gumat/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/04/img-товар-на-подложке-54.png" alt="Био Гумат" class="product-icon">
+					<div class="product-name">Био Гумат</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/uni/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-59.png" alt="Универсальный Биокомплекс" class="product-icon">
+					<div class="product-name">Универсальный Биокомплекс</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/bioazot/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-51.png" alt="Биоазот" class="product-icon">
+					<div class="product-name">Биоазот</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/fungitsidy/btueat/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/05/img-товар-на-подложке-50.png" alt="Биозащита от болезней Биокомплекс" class="product-icon">
+					<div class="product-name">Биозащита от болезней Биокомплекс</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-marki-b-fe-v-kanistre-10-litrov/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-38.png" alt="Лигногумат В-Fe" class="product-icon">
+					<div class="product-name">Лигногумат В-Fe</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-normat-l/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-35.png" alt="Нормат Л" class="product-icon">
+					<div class="product-name">Нормат Л</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-normat-l-akva/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-33.png" alt="Нормат Л Аква" class="product-icon">
+					<div class="product-name">Нормат Л Аква</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-normat-s/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-34.png" alt="Нормат С" class="product-icon">
+					<div class="product-name">Нормат С</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-normat-s-akva/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-32.png" alt="Нормат С Аква" class="product-icon">
+					<div class="product-name">Нормат С Аква</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/stimulyatory-i-regulyatory-rosta/lignogumat-argolan-akva/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/06/img-товар-на-подложке-31.png" alt="Арголан Аква" class="product-icon">
+					<div class="product-name">Арголан Аква</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/fertilizer-npk-202020-me-2/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 20:20:20 + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/npk-134013-me/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 13:40:13 + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/fertilizer-npk-181818-3mgo-me/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 18:18:18 + 3MgO + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/fertilizer-npk-151530-mgo-me/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 15:15:30 + MgO + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/fertilizer-npk-12831-2mgo-me/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 12:8:31 + 2MgO + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/npk-fertilizer-31138-4mgo-me/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 3:11:38 + 4MgO + 8S + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/npk-udobreniya/fertilizer-npk-61435-2mgo-me/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2025/02/img-товар-на-подложке-14.png" alt="Продукт 2" class="product-icon">
+					<div class="product-name">NPK 6:14:35 + 2MgO + ME</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/winter-durum-wheat-koshelevskaya-es/"
+					class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-25.png" alt="Озимая твердая пшеница "Кошелевская ЭС"" class="product-icon">
+					<div class="product-name">Озимая твердая пшеница "Кошелевская ЭС"</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/spring-soft-wheat-novosibirsk-75/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-17.png" alt="Яровая мягкая пшеница "Новосибирская 75"" class="product-icon">
+					<div class="product-name">Яровая мягкая пшеница "Новосибирская 75"</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/spring-soft-wheat-novosibirsk-49/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-18.png" alt="Яровая мягкая пшеница "Новосибирская 49"" class="product-icon">
+					<div class="product-name">Яровая мягкая пшеница "Новосибирская 49"</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/soy-samer-2-elite/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-23.png" alt="Соя "Самер 2" Элита" class="product-icon">
+					<div class="product-name">Соя "Самер 2" Элита</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/soy-samer-1-elite/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-24.png" alt="Соя "Самер 1" Элита" class="product-icon">
+					<div class="product-name">Соя "Самер 1" Элита</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/dobrynya-sunflower/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-19.png" alt="Подсолнечник Добрыня" class="product-icon">
+					<div class="product-name">Подсолнечник Добрыня</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/sunflower-fogor/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-20.png" alt="Подсолнечник Фогор" class="product-icon">
+					<div class="product-name">Подсолнечник Фогор</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/sunflower-clip/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-21.png" alt="Подсолнечник Клип" class="product-icon">
+					<div class="product-name">Подсолнечник Клип</div>
+				</a>
+
+				<a href="https://agrosoyuznsk.ru/product/seed/sunflower-surus/" class="product-card">
+					<img src="https://agrosoyuznsk.ru/wp-content/uploads/2024/12/img-товар-на-подложке-22.png" alt="Подсолнечник Сурус" class="product-icon">
+					<div class="product-name">Подсолнечник Сурус</div>
+				</a>
+
+			</div>
+		</div>
+
+		<script>
+			// Оптимизация загрузки изображений
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.loading = 'lazy';
+            });
+        });
+
+        // Плавная анимация при скролле
+        const cards = document.querySelectorAll('.product-card');
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        cards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            observer.observe(card);
+        });
+		</script>
+</body>
+
+</html>
